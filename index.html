@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--
+Site written for the UNC CS Club 
+originally by Brandon Davis (bd at unc dot edu)
+maintained by the club, and served via gh pages
+-->
+<html>
+    <head>
+    	<title>UNC CS Club</title>
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            .listserv input[type=email] {
+                width: 300px;
+                padding: 10px;
+                margin: 8px;
+                box-sizing: border-box;
+                background-color: #FFFFFF;
+                color: #000000;
+                border-radius: 4px;
+                height: auto !important;
+            }
+            .listserv input[type=submit] {
+                /*padding-right: 15px;*/
+                margin-right: 15px;
+            }
+            nav .brand-logo{
+                padding-left: 15px;
+            }
+            .card-action a{
+                color: #000000 !important;
+            }
+            .jobs h5 {
+                font-weight: 300 !important;
+            }
+        </style>
+    </head>
+    <body background="backdrop.jpg" style="background-size:cover; background-attachment:fixed;">
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <!-- Import custom JavaScript -->
+        <script type="text/javascript" src="js/index.js"></script>
+
+        <nav>
+        <div class="nav-wrapper blue lighten-3">
+            <a href="#!" class="brand-logo bulletin-btn">UNC CS Club</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <form class="listserv" action="http://lists.unc.edu/subscribe/subscribe.tml" method="post">
+                        <input type="email" name="email" id="email" placeholder="student@cs.unc.edu"></input>
+                        <input type="hidden" name="list" value="csclub" />
+                        <input type="hidden" name="confirm" value="one" />
+                        <input type="hidden" name="showconfirm" value="T" />
+                        <input type="hidden" name="url" value="http://csclub.cs.unc.edu/" />
+                        <input type="submit" class="btn listserv purple lighten-3" value="Join Listserv">
+                    </form>
+                </li>
+                <li><a class="about-btn" href="#about">About</a></li>
+                <li><a class="bulletin-btn" href="#bulletin">Bulletin</a></li>
+                <li><a class="hackerspace-btn" href="#hackerspace">Hackerspace</a></li>
+                <li><a class="jobs-btn" href="#jobs">Job Board</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a class="about-btn" href="#about">About</a></li>
+                <li><a class="bulletin-btn" href="#bulletin">Bulletin</a></li>
+                <li><a class="hackerspace-btn" href="#hackerspace">Hackerspace</a></li>
+                <li><a class="jobs-btn" href="#jobs">Job Board</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row">
+        
+        <div id="card-container" class="col s12 m12 l6 offset-l3">
+            
+            <!-- Temp card while the real content loads -->
+            <div class="card white darken-1 black-text">
+                <div class="card-content">
+                    <span class="card-title">LOADING Cards....</span>
+                    <p>Data from the backend is loading.  In case something broke, here'e some basic info.
+                    Meetings are on Thursday in FB007 at 7PM.  Contact Brandon Davis or Luke Tannenbaum (emails in the "about" page)
+                    for any inquiries.</p>
+                </div>
+                <div class="card-action blue lighten-4">
+                    <a href="http://cs.unc.edu">CS Department Page</a>
+                </div>
+            </div>
+
+        </div>
+        
+        <div id="about-container" class="col s12 m12 l6 offset-l3" style="display:none;">
+            
+            <!-- Static About Page -->
+            <div class="card-panel white">
+                <h4>About Us</h4>
+                <p>The UNC Computer Science Club puts together regular meetings and fun social events for majors, minors, and anyone else interested in cs.  We also host guest speakers and facilitate the job search in partnership with career services and the CS department.  We meet during the regular semester Thursdays from 7PM to 8PM in Fred Brooks 007.
+                <h4>Links</h4>
+                <a href="https://www.facebook.com/groups/unccsclub/">UNC Computer Science Facebook Group</a>
+                <br>
+                <a href="http://hacknc.com">HackNC</a>
+                <br>
+                <a href="https://www.facebook.com/groups/209467285885546/">Women in Computer Science Facebook Group</a>
+                <br>
+                <a href="http://pearlhacks.com">Pearl Hacks</a>
+                <br>
+                <a href="http://cs.unc.edu">UNC Department Homepage</a>
+                <br>
+                <a href="http://cs.unc.edu/help-article/linux-servers/">Department Linux Server List</a>
+                <br>
+                <a href="http://cs.unc.edu/calendars/">CS Department Calendars</a>
+
+                <h4>People</h4>
+                UNC CS club is brought to you in part by the following folks:
+                <br><br>
+                <div class="divider"></div>
+                    <div class="section">
+                        <h5>Brandon Davis | co-president</h5>
+                        <p>Email davisba@cs.unc.edu</p>
+                    </div>
+                 <div class="divider"></div>
+                    <div class="section">
+                        <h5>Luke Tannenbaum | co-president</h5>
+                        <p>Email ltbaum@cs.unc.edu</p>
+                    </div>
+                 <div class="divider"></div>
+                </p>
+            </div>
+
+        </div>
+
+        <div id="hackerspace-container" class="col s12 m12 l6 offset-l3" style="display:none;">
+
+            <!-- Static Hackerspace Page -->
+            <div class="card-panel white">
+                <h3>The Hackerspace</h3>
+                <p>The Hackerspace / Computer Science Club Room is a room for socializing, studying, and is intended to provide a physical place for members to colaborate and grow our CS community.  If you want keycard access, read below, but also feel free to drop in anytime!  Give the door a knock - there are almost always people there to let you in.  We'd love to meet you :)
+
+                <h3>Access</h3>
+                Sitterson Room 027 requires keycard access, which you can get by filling out the form at the link below.  Please note that submitting the form implies agreement to the hackerspace guidlines detailed <a href="">here</a>.  We process requests manually once a week or so. 
+                <br><br>
+                <a href="https://docs.google.com/document/d/1T3b8Y6IppdV4pSq78db061Gh7HSuyH5fNcJ2qkqCkDw/edit#" class="btn purple lighten-3">Hackerspace Rules</a>&nbsp&nbsp<a href="https://docs.google.com/forms/d/1zOUhqqm6Ux4xtxBVz2nJ25TA0uOUfo_2mcZ3cIUWmh0" class="btn blue">Request Access</a>
+
+                <h3>Resources</h3>
+                <p>The Hackerspace has a wealth of hardware components that are avaiable for loan or use within the room.  We have Raspberry Pis, Arduinos, sensor kits, and lots of old junk electronics to tinker with.  We even built a quadcopter in 2014.  If you are interested in any hardware, come by the hackerspace or email Brandon Davis (bd@unc.edu).
+
+            </div>
+
+        </div>
+
+        <div id="jobs-container" class="col s12 m12 l6 offset-l3 jobs" style="display: none;">
+
+            <!--Static Jobs Page header - dynamic content will follow -->
+            <div class="card white darken-1 black-text job-header">
+                <div class="card-content">
+                    <span class="card-title">CS Club Job Board</span>
+                    <p>Welcome to the CS Club Job board!  Companies, start-ups, and university organizations can post job opportunities.  If you have any additional questions, please feel free to email <a href="mailto:csclub@cs.unc.edu">csclub@cs.unc.edu</a>.
+                    <br><br>
+                    <a href="https://docs.google.com/forms/d/1MfpB8nZqqgv4pKZDHkzUT_PfMC1nQyW847W1d55-VAc/viewform" class="btn blue">Submit a Job Request</a>
+                    </p>
+                </div>
+            </div>           
+
+        </div>
+
+      </div>
+    </body>
+  </html>
