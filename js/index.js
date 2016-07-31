@@ -1,6 +1,6 @@
 // A list of the content contaiers we can swap between, and the buttons that operate them
-views = ["#card-container", "#about-container", "#hackerspace-container", "#jobs-container"];
-buttons = [".bulletin-btn", ".about-btn", ".hackerspace-btn", ".jobs-btn"];
+views = ["#card-container", "#about-container", "#hackerspace-container", "#jobs-container", "#library-container"];
+buttons = [".bulletin-btn", ".about-btn", ".hackerspace-btn", ".jobs-btn", ".library-btn"];
 
 //URLS of google sheets we want to load.
 bulletin_sheet = "https://spreadsheets.google.com/feeds/list/1_0dRw3otWd3H8VyFMZTVjNevCCY1GNeP6bp_UUVDiuw/default/public/values?alt=json&callback=handle_bulletin";
@@ -9,7 +9,7 @@ card_keys = ["gsx$title", "gsx$content" , "gsx$email", "gsx$link", "gsx$linktitl
 jobs_sheet = "https://spreadsheets.google.com/feeds/list/1x03TWP4e50RumOBEGnm0Dm37cBQWqOqyMevw77o4WI8/default/public/values?alt=json&callback=handle_jobs";
 jobs_keys = ["gsx$companyname", "gsx$positiontitle", "gsx$positiondescription", "gsx$expiration", "gsx$compensation", "gsx$contactinformation", "gsx$applicationinstructions", "gsx$applicationlink", "gsx$approved"];
 
-hashes = ["bulletin", "about", "hackerspace", "jobs"];
+hashes = ["bulletin", "about", "hackerspace", "jobs", "library"];
 
 // Called on page ready
 $( document ).ready(function(){
@@ -33,6 +33,7 @@ $( document ).ready(function(){
     $(buttons[1]).click(function(event){ setView(views[1]); }); //about-container
     $(buttons[2]).click(function(event){ setView(views[2]); }); //hackerspace-container
     $(buttons[3]).click(function(event){ setView(views[3]); }); //jobs-container
+    $(buttons[4]).click(function(event){ setView(views[4]); }); //library-container
     
     //load google sheet content
     loadSheet(bulletin_sheet);
