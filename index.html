@@ -71,6 +71,7 @@ maintained by the club, and served via gh pages
                         <li><a class="bulletin-btn" href="#bulletin">Bulletin</a></li>
                         <li><a class="hackerspace-btn" href="#hackerspace">Hackerspace</a></li>
                         <li><a class="library-btn" href="#library">Library</a></li>
+                        <li><a class="calendar-btn" href="#calendar">Calendar</a></li>
                         <li><a class="jobs-btn" href="#jobs">Job Board</a></li>
                     </ul>
                     <ul class="side-nav" id="mobile-demo">
@@ -78,6 +79,7 @@ maintained by the club, and served via gh pages
                         <li><a class="bulletin-btn" href="#bulletin">Bulletin</a></li>
                         <li><a class="hackerspace-btn" href="#hackerspace">Hackerspace</a></li>
                         <li><a class="library-btn" href="#library">Library</a></li>
+                        <li><a class="calendar-btn" href="#calendar">Calendar</a></li>
                         <li><a class="jobs-btn" href="#jobs">Job Board</a></li>
                     </ul>
                 </div>
@@ -117,6 +119,16 @@ maintained by the club, and served via gh pages
                             csclub<span style="display:none;">foobar</span>@cs.unc.edu
                         </span>
                     </p>
+
+                    <h4>Join Listserv</h4>
+                    <form class="listserv" action="http://lists.unc.edu/subscribe/subscribe.tml" method="post">
+                        <input type="email" name="email" id="email" placeholder="student@cs.unc.edu"></input>
+                        <input type="hidden" name="list" value="csclub" />
+                        <input type="hidden" name="confirm" value="one" />
+                        <input type="hidden" name="showconfirm" value="T" />
+                        <input type="hidden" name="url" value="http://csclub.cs.unc.edu/" />
+                        <input type="submit" class="btn listserv purple lighten-3" value="Join Listserv">
+                    </form>
 
                     <h4>Links</h4>
                     <p>
@@ -180,6 +192,18 @@ maintained by the club, and served via gh pages
                     <h4>Borrowing</h4>
                     <p>Hopefully in the near future, a list of the available titles will make an appearance here.  Until that time, just request hackerspace access and come see what we have.  If you want to take a book out of the hackerspace, leave a sticky note on the side of the bookcase with your name and what you borrowed.  The hackerspace reserves the right to ask for it's books back at any time.
                     </p>
+                </div>
+
+            </div>
+
+            <div id="calendar-container" class="col s12 m12 l6 offset-l3" style="display:none;">
+                
+                <!-- Static Calendar Page -->
+                <div class="card-panel white">
+                    
+                    <h4>Our Calendar</h4>
+                    <iframe src="https://calendar.google.com/calendar/embed?src=cs.unc.edu_kinpiaiedr3tgk160ju2pv5qds%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+                
                 </div>
 
             </div>
