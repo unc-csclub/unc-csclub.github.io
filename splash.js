@@ -87,8 +87,8 @@ window.onload = function () {
     function generateSprite() {
 
         var canvas = document.createElement('canvas');
-        canvas.width = 16;
-        canvas.height = 16;
+        canvas.width = 32;
+        canvas.height = 32;
 
         var context = canvas.getContext('2d');
         var gradient = context.createRadialGradient(canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2);
