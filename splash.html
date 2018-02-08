@@ -5,12 +5,13 @@
   - MIT Licenced
 -->
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/three.js/89/three.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.min.js"></script>
+    <script type="text/javascript" src="splash.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <style type="text/css">
-
     body {
         margin: 0;
         overflow: hidden;
@@ -19,7 +20,7 @@
         width: 25%;
         float: left;
     }
-	h1, a {
+	h1, a, p {
 		color: rgba(255,255,255,.7);
     	font-family: 'Roboto', sans-serif;
 	}
@@ -32,17 +33,25 @@
     #text-container {
         margin: 3%;
     }
+	#corner-container {
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		margin: 1%;
+	}
     </style>
 </head>
 <body>
     <div id="container">
         <img id="logo" src="logo.png">
         <div id="text-container">
-            <h1 style="font-size: 250%; margin: 0;">UNC Computer Science Club</h1>
-            <a href="" style="font-size: 100%; margin: 1%;">Enter site...</a>
+            <h1 style="font-size: 3vmax; margin: 0;">UNC Computer Science Club</h1>
+            <a href="index.html" style="font-size: 100%; margin: 1%;">Enter site...</a>
         </div>
     </div>
+	<p id="corner-container">Latest Annoucement:<br><a id="latest-announcement" href="index.html">Loading title...</a></p>
     <div id="Stats-output"></div>
     <div id="WebGL-output"></div>
-    <script type="text/javascript" src="splash.js"></script>
+	<!-- Load bulletin data last so that we have somewhere to put it -->
+	<script type="text/javascript" src="https://spreadsheets.google.com/feeds/list/1_0dRw3otWd3H8VyFMZTVjNevCCY1GNeP6bp_UUVDiuw/default/public/values?alt=json&callback=display_announce_title"></script> 
 </body>

@@ -168,3 +168,9 @@ window.onload = function () {
 
     }
 };
+
+// Once the Google Sheet loads, it will call this function with the annoucements data
+async function display_announce_title(data) {
+    document.getElementById("latest-announcement").innerHTML = data.feed.entry[0]["gsx$title"].$t;
+}
+
