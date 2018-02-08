@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+  - Copyright 2018 Joshua Bakita
+  - Based on work copyright Eric J Nesser
+  - MIT Licenced
+-->
+<head>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/three.js/89/three.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style type="text/css">
+
+    body {
+        margin: 0;
+        overflow: hidden;
+    }
+    #logo {
+        width: 25%;
+        float: left;
+    }
+	h1, a {
+		color: rgba(255,255,255,.7);
+    	font-family: 'Roboto', sans-serif;
+	}
+    #container {
+    	position: fixed;
+    	display: flex;
+    	align-items : center;
+    	margin: 2%;
+	}
+    #text-container {
+        margin: 3%;
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img id="logo" src="logo.png">
+        <div id="text-container">
+            <h1 style="font-size: 250%; margin: 0;">UNC Computer Science Club</h1>
+            <a href="" style="font-size: 100%; margin: 1%;">Enter site...</a>
+        </div>
+    </div>
+    <div id="Stats-output"></div>
+    <div id="WebGL-output"></div>
+    <script type="text/javascript" src="splash.js"></script>
+</body>
