@@ -14,10 +14,10 @@ window.onload = function () {
     var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
 
     // create a render and set the size
-    var webGLRenderer = new THREE.WebGLRenderer();
-    webGLRenderer.setClearColor(new THREE.Color(0,0,0));
-    webGLRenderer.setSize(window.innerWidth, window.innerHeight);
-    webGLRenderer.shadowMap.enabled = true;
+    var renderer = new THREE.WebGLRenderer();
+    renderer.setClearColor(new THREE.Color(0,0,0));
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.shadowMap.enabled = true;
 
 
     // position and point the camera to the center of the scene
@@ -27,7 +27,7 @@ window.onload = function () {
     camera.lookAt(new THREE.Vector3(10, 0, 0));
 
     // add the output of the renderer to the html element
-    document.getElementById("WebGL-output").append(webGLRenderer.domElement);
+    document.getElementById("WebGL-output").append(renderer.domElement);
 
     // call the render function
     var step = 0;
@@ -83,7 +83,7 @@ window.onload = function () {
 
     render();
 
-    // from THREE.js examples
+    // Based on THREE.js example
     function generateSprite() {
 
         var canvas = document.createElement('canvas');
@@ -141,7 +141,7 @@ window.onload = function () {
 
         // render using requestAnimationFrame
         requestAnimationFrame(render);
-        webGLRenderer.render(scene, camera);
+        renderer.render(scene, camera);
     }
 
     function initStats() {
@@ -164,7 +164,7 @@ window.onload = function () {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
 
-        webGLRenderer.setSize( window.innerWidth, window.innerHeight );
+        renderer.setSize(window.innerWidth, window.innerHeight);
 
     }
 };

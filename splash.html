@@ -15,15 +15,21 @@
     body {
         margin: 0;
         overflow: hidden;
+        background-color: black;
+    	font-family: 'Roboto', sans-serif;
+    }
+	h1, a, p {
+		color: rgba(255,255,255,.7);
+	}
+    input {
+        font-family: 'Roboto', sans-serif;
+        border: 0;
+        margin: 5px 0 0 5px;
     }
     #logo {
         width: 25%;
         float: left;
     }
-	h1, a, p {
-		color: rgba(255,255,255,.7);
-    	font-family: 'Roboto', sans-serif;
-	}
     #container {
     	position: fixed;
     	display: flex;
@@ -32,6 +38,17 @@
 	}
     #text-container {
         margin: 3%;
+    }
+    #listserv-container {
+        opacity: .7;
+        border: 0;
+    }
+    #listserv-container > [type=submit] {
+        height: 31px;
+    }
+    #listserv-container > [type=email] {
+        height: 21px;
+        padding: 5px;
     }
 	#corner-container {
 		position: fixed;
@@ -46,7 +63,14 @@
         <img id="logo" src="logo.png">
         <div id="text-container">
             <h1 style="font-size: 3vmax; margin: 0;">UNC Computer Science Club</h1>
-            <a href="index.html">Enter site...</a>
+			<form id="listserv-container" action="http://lists.unc.edu/subscribe/subscribe.tml" method="post">
+				<input type="email" name="email" id="email" placeholder="student@cs.unc.edu" required></input>
+				<input type="hidden" name="list" value="csclub" />
+				<input type="hidden" name="confirm" value="one" />
+				<input type="hidden" name="showconfirm" value="T" />
+				<input type="hidden" name="url" value="http://csclub.cs.unc.edu/" />
+				<input type="submit" value="Join Club">
+			</form>
         </div>
     </div>
 	<p id="corner-container">Latest Annoucement:<br><a id="latest-announcement" href="index.html">Loading title...</a></p>
